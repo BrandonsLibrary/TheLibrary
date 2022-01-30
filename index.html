@@ -101,38 +101,44 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 	<tw-storydata name="The Library" startnode="2" creator="Twine" creator-version="2.3.14" ifid="34A2C594-9381-40F7-BF51-8D53C3EB1DE0" zoom="1" format="SugarCube" format-version="2.34.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
  background: url(background.png) repeat center;
  background-size: cover;
- background-color: #B89582;
- color: #130D0A;
+ background-color: #667572;
+ color: #ffeead;
  font-family: Oswald, sans-serif;;
  font-size: 200%;
 }
 a {
- color: #743c1e;
+ color: #ffad60;
 }
 a:hover {
- color: #895B2E;
+ color: #d9534f;
  text-decoration: none;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">$('#ui-bar').remove();
-$(document.head).find('#style-ui-bar').remove();</script><tw-passagedata pid="1" name="StoryInit" tags="" position="0,0" size="100,100"></tw-passagedata><tw-passagedata pid="2" name="LibraryEntrance" tags="" position="801,0" size="100,100">You are standing outside of a library.
+$(document.head).find('#style-ui-bar').remove();</script><tw-passagedata pid="1" name="StoryInit" tags="" position="0,0" size="100,100">/*Variables*/
+&lt;&lt;set $firstName = &quot;&quot;&gt;&gt;
+&lt;&lt;set $lastName = &quot;&quot;&gt;&gt;
+&lt;&lt;set $birthYear = &quot;&quot;&gt;&gt;
+&lt;&lt;set $age = &quot;&quot;&gt;&gt;
+&lt;&lt;set $face = &quot;&quot;&gt;&gt;
+&lt;&lt;set $signature = &quot;&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="LibraryEntrance" tags="" position="801,0" size="100,100">You are standing outside of a library.
 [[Enter library|LibraryEntrance1]]
 [[Inspect bushes|LibraryEntrance2]]</tw-passagedata><tw-passagedata pid="3" name="GameOver" tags="" position="1201,0" size="100,100">[img[https://c.tenor.com/ZpBMkWyufhMAAAAC/dead.gif]]
-&lt;&lt;timed 1s&gt;&gt;&lt;&lt;run Engine.restart()&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="LibraryEntrance1" tags="" position="600,201" size="100,100">The librarian wants to scan your library pass.
-[[&quot;Here you go&quot;|Library]]
-[[&quot;Sorry, I forgot mine&quot;|LibraryEntrance11]]
+&lt;&lt;timed 1s&gt;&gt;&lt;&lt;run Engine.restart()&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="LibraryEntrance1" tags="" position="601,200" size="100,100">The librarian wants to scan your library pass.
+[[&quot;Here you go&quot;|LibraryEntrance11]]
+[[&quot;Sorry, I forgot mine&quot;|LibraryEntrance122]]
 [[&quot;I don&#39;t have one&quot;|LibraryEntrance12]]
 [[Threaten them|LibraryEntrance13]]</tw-passagedata><tw-passagedata pid="5" name="LibraryEntrance2" tags="" position="1000,200" size="100,100">Something is lurking there.
 [[Dive head-first into the bush|GameOver]]
-[[Stop inspecting|LibraryEntrance]]</tw-passagedata><tw-passagedata pid="6" name="Library" tags="" position="200,599" size="100,100">//Detroit Library - Main Floor//
+[[Stop inspecting|LibraryEntrance]]</tw-passagedata><tw-passagedata pid="6" name="Library" tags="" position="300,599" size="100,100">//Detroit Library - Main Floor//
 [[Fantasy section|Library1]]
 [[Sci-Fi section|Library1]]
 [[Romance section|Library1]]
 [[History section|Library1]]
-[[Biography section|Library1]]</tw-passagedata><tw-passagedata pid="7" name="LibraryEntrance11" tags="" position="200,401" size="100,100">&quot;Great! You may proceed.&quot;
+[[Biography section|Library1]]</tw-passagedata><tw-passagedata pid="7" name="LibraryEntrance11" tags="" position="300,401" size="100,100">&quot;Great! You may proceed.&quot;
 [[Proceed|Library]]
 [[Advance|Library]]
 [[Continue|Library]]
 [[Go ahead|GameOver]]
-[[Carry on|GameOver]]</tw-passagedata><tw-passagedata pid="8" name="LibraryEntrance12" tags="" position="601,402" size="100,100">&quot;Would you like to create one?&quot;
+[[Carry on|GameOver]]</tw-passagedata><tw-passagedata pid="8" name="LibraryEntrance12" tags="" position="601,400" size="100,100">&quot;Would you like to create one?&quot;
 [[&quot;Yes&quot;|CardCreation]]
 [[&quot;No&quot;|LibraryEntrance122]]</tw-passagedata><tw-passagedata pid="9" name="LibraryEntrance13" tags="" position="1000,401" size="100,100">&quot;Woah there! Calm down.&quot;
 [[Calm down|LibraryEntrance131]]
@@ -150,68 +156,67 @@ $(document.head).find('#style-ui-bar').remove();</script><tw-passagedata pid="1"
 [[Proceed|GameOver]]
 [[Carry on|GameOver]]</tw-passagedata><tw-passagedata pid="13" name="LibraryEntrance132" tags="" position="1101,600" size="100,100">&quot;Don&#39;t make me call the police!&quot;
 [[Don&#39;t make them call the police|LibraryEntrance131]]
-[[Make them call the police|LibraryEntrance1321]]</tw-passagedata><tw-passagedata pid="14" name="LibraryEntrance122" tags="" position="600,598.5" size="100,100">&quot;Do you intend on signing-out any items?&quot;
+[[Make them call the police|LibraryEntrance1321]]</tw-passagedata><tw-passagedata pid="14" name="LibraryEntrance122" tags="" position="599,601" size="100,100">&quot;Do you intend on signing-out any items?&quot;
 [[&quot;Yes&quot;|LibraryEntrance1221]]
-[[&quot;No&quot;|LibraryEntrance1222]]</tw-passagedata><tw-passagedata pid="15" name="CardCreation" tags="" position="1401,200.5" size="100,100">&lt;&lt;set _var = &quot;&quot;&gt;&gt;
-//Detroit Library Registration//
+[[&quot;No&quot;|LibraryEntrance1222]]</tw-passagedata><tw-passagedata pid="15" name="CardCreation" tags="" position="1401,199" size="100,100">//Detroit Library Registration//
 &#39;&#39;Your first name:&#39;&#39;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;1&quot; checked&gt;&gt;Santiago&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;2&quot;&gt;&gt;Sancha&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;3&quot;&gt;&gt;Sebastian&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;4&quot;&gt;&gt;Susana&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;5&quot;&gt;&gt;Samuel&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;6&quot;&gt;&gt;Sandra&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$firstName&quot; &quot;1&quot; checked&gt;&gt;Santiago&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$firstName&quot; &quot;2&quot;&gt;&gt;Sancha&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$firstName&quot; &quot;3&quot;&gt;&gt;Sebastian&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$firstName&quot; &quot;4&quot;&gt;&gt;Susana&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$firstName&quot; &quot;5&quot;&gt;&gt;Samuel&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$firstName&quot; &quot;6&quot;&gt;&gt;Sandra&lt;/label&gt;
 
 &#39;&#39;Your last name:&#39;&#39;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;1&quot; checked&gt;&gt;A.&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;2&quot;&gt;&gt;E.&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;3&quot;&gt;&gt;I.&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;4&quot;&gt;&gt;O.&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;5&quot;&gt;&gt;U.&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;6&quot;&gt;&gt;Y.&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$lastName&quot; &quot;1&quot; checked&gt;&gt;A.&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$lastName&quot; &quot;2&quot;&gt;&gt;E.&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$lastName&quot; &quot;3&quot;&gt;&gt;I.&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$lastName&quot; &quot;4&quot;&gt;&gt;O.&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$lastName&quot; &quot;5&quot;&gt;&gt;U.&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$lastName&quot; &quot;6&quot;&gt;&gt;Y.&lt;/label&gt;
 
 &#39;&#39;Your year of birth:&#39;&#39;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;1&quot; checked&gt;&gt;13BCE&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;2&quot;&gt;&gt;1812&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;3&quot;&gt;&gt;1984&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;4&quot;&gt;&gt;2077&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$birthYear&quot; &quot;1&quot; checked&gt;&gt;13BCE&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$birthYear&quot; &quot;2&quot;&gt;&gt;1812&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$birthYear&quot; &quot;3&quot;&gt;&gt;1984&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$birthYear&quot; &quot;4&quot;&gt;&gt;2077&lt;/label&gt;
 
 &#39;&#39;Your current age:&#39;&#39;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;1&quot; checked&gt;&gt;4&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;2&quot;&gt;&gt;17&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;3&quot;&gt;&gt;22&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;4&quot;&gt;&gt;73&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$age&quot; &quot;1&quot; checked&gt;&gt;4&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$age&quot; &quot;2&quot;&gt;&gt;17&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$age&quot; &quot;3&quot;&gt;&gt;22&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$age&quot; &quot;4&quot;&gt;&gt;73&lt;/label&gt;
 
 &#39;&#39;Your face:&#39;&#39;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;1&quot; checked&gt;&gt;😍&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;2&quot;&gt;&gt;🤤&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;3&quot;&gt;&gt;😉&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;4&quot;&gt;&gt;🤣&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;5&quot;&gt;&gt;🤔&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;6&quot;&gt;&gt;😨&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;7&quot;&gt;&gt;😠&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;8&quot;&gt;&gt;💀&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$face&quot; &quot;1&quot; checked&gt;&gt;😍&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$face&quot; &quot;2&quot;&gt;&gt;🤤&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$face&quot; &quot;3&quot;&gt;&gt;😉&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$face&quot; &quot;4&quot;&gt;&gt;🤣&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$face&quot; &quot;5&quot;&gt;&gt;🤔&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$face&quot; &quot;6&quot;&gt;&gt;😨&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$face&quot; &quot;7&quot;&gt;&gt;😠&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$face&quot; &quot;8&quot;&gt;&gt;💀&lt;/label&gt;
 
 &#39;&#39;Your signature:&#39;&#39;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;1&quot; checked&gt;&gt;🚫&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;2&quot;&gt;&gt;🚳&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;3&quot;&gt;&gt;🚭&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;4&quot;&gt;&gt;🚯&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;5&quot;&gt;&gt;🚱&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;6&quot;&gt;&gt;🚷&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;7&quot;&gt;&gt;📵&lt;/label&gt;
-&lt;label&gt;&lt;&lt;radiobutton &quot;_var&quot; &quot;8&quot;&gt;&gt;🔞&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$signature&quot; &quot;1&quot; checked&gt;&gt;🚫&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$signature&quot; &quot;2&quot;&gt;&gt;🚳&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$signature&quot; &quot;3&quot;&gt;&gt;🚭&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$signature&quot; &quot;4&quot;&gt;&gt;🚯&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$signature&quot; &quot;5&quot;&gt;&gt;🚱&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$signature&quot; &quot;6&quot;&gt;&gt;🚷&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$signature&quot; &quot;7&quot;&gt;&gt;📵&lt;/label&gt;
+&lt;label&gt;&lt;&lt;radiobutton &quot;$signature&quot; &quot;8&quot;&gt;&gt;🔞&lt;/label&gt;
 
 [[Hand in|CardCreation1]]</tw-passagedata><tw-passagedata pid="16" name="LibraryEntrance1321" tags="" position="1101,800" size="100,100">&quot;HOW WOULD YOU LIKE TO SETTLE THIS?&quot;
 [[Knife Crime|Ending1]]
 [[Lethal Literature Trivia|GameOver]]</tw-passagedata><tw-passagedata pid="17" name="Ending1" tags="" position="1400,0" size="100,100">&lt;h2&gt;ENDING: LATE LIBRARIAN&lt;/h2&gt;\
 //You killed the librarian//
-&lt;&lt;link &quot;Play again&quot;&gt;&gt;&lt;&lt;run Engine.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="CardCreation1" tags="" position="1400,399.5" size="100,100">&quot;Thank you! You may carry on while I finish your card&#39;s set up.&quot;
+&lt;&lt;link &quot;Play again&quot;&gt;&gt;&lt;&lt;run Engine.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="CardCreation1" tags="" position="1400,399" size="100,100">&quot;Thank you! You may carry on while I finish your card&#39;s set up.&quot;
 [[Carry on|Library]]
 [[Advance|Library]]
 [[Continue|Library]]
 [[Go ahead|GameOver]]
-[[Proceed|GameOver]]</tw-passagedata><tw-passagedata pid="19" name="Library1" tags="" position="201,799" size="100,100">[img[https://c.tenor.com/pn_Foq4JttEAAAAd/cant-have-shit-in-detroit.gif]]
+[[Proceed|GameOver]]</tw-passagedata><tw-passagedata pid="19" name="Library1" tags="" position="301,799" size="100,100">[img[https://c.tenor.com/pn_Foq4JttEAAAAd/cant-have-shit-in-detroit.gif]]
 &lt;&lt;timed 2s&gt;&gt;&lt;&lt;run Engine.restart()&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Ending2" tags="" position="1601,0" size="100,100">&lt;h2&gt;ENDING: DREADFUL DETROIT&lt;/h2&gt;\
 //Become human//
 &lt;&lt;link &quot;Play again&quot;&gt;&gt;&lt;&lt;run Engine.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata></tw-storydata>
